@@ -6,4 +6,5 @@ public class GameManager : SingletoneGameObject<GameManager>
 {
     [SerializeField] public Transform GenerateTransform = null;
     [SerializeField] public List<Color> ColorsStars = null;
+    [SerializeField] public List<Bullet> Bullets = null;
 }
