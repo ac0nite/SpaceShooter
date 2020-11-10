@@ -10,4 +10,5 @@ public class GameManager : SingletoneGameObject<GameManager>
     [SerializeField] public List<EnemyController> Enemy = null;
     [SerializeField] public GameObject Player = null;
     [SerializeField] public List<MineController> Mines = null;
+    [SerializeField] public List<Rocket> Rockets = null;
 }

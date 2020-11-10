@@ -50,7 +50,12 @@ public class ShipController : MonoBehaviour
         _shooting.Fire(TypeAmmunition.Bullet, Vector2.right, isFire);
     }
 
-    public void FireRockets(bool isFire)
+    public void FireHardBullets(bool isFire)
+    {
+        _shooting.Fire(TypeAmmunition.HardBullet, Vector2.right, isFire);
+    }
+
+    public void FireRocket(bool isFire)
     {
         _shooting.Fire(TypeAmmunition.Rocket, Vector2.right, isFire);
     }

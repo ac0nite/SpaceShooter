@@ -6,6 +6,7 @@ public enum TypeAmmunition
 {
     Undefined = -1,
     Bullet = 0,
-    Rocket = 1,
-    Mine = 2
+    HardBullet = 1,
+    Rocket = 2,
+    Mine = 3
 }
