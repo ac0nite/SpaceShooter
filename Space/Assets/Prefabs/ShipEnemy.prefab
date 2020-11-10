@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 631065816149513383}
   - component: {fileID: 631065816149513382}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: simpleEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -90,7 +90,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 631065816690007215}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ShootPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -125,7 +125,7 @@ GameObject:
   - component: {fileID: 631065816692818025}
   - component: {fileID: 631065816692818024}
   - component: {fileID: 631065816692818031}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ShipEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -218,8 +218,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _shootingPointBullet: {fileID: 631065816690007215}
-  _shootingPointsRockets: []
-  _delayShooting: 1.5
+  _shootingPointsHardBullet: []
+  _shootingPointRocket: {fileID: 0}
+  _bulletDelayShooting: 0.2
+  _hardBulletDelayShooting: 0.3
+  _rocketDelayShooting: 0.5
 --- !u!114 &631065816692818031
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -245,7 +248,7 @@ GameObject:
   m_Component:
   - component: {fileID: 631065817219944124}
   - component: {fileID: 631065817219944125}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: space_ship_enemy_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
