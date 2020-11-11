@@ -13,8 +13,27 @@ public class Rocket : MonoBehaviour
     {
         //StartCoroutine(AttackEnemy());
         tr = GetComponent<RocketDetectEnemy>().Detect();
+        _move.Speed *= 1.8f;
+        //transform.LookAt(Vector3.forward, Vector3.Cross(Vector3.forward, tr.position - transform.position));
+        // var rotation = Quaternion.LookRotation(tr.position - transform.position);
+        // transform.rotation = rotation;
+        /*  Vector3 direction = (currDest - transform.position).normalized;
+            float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+            Quaternion lookRotation = Quaternion.AngleAxis(angle, Vector3.forward);
+            */
+
+        // Vector3 direction = tr.position - transform.position;
+        // float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        // Quaternion lookRotation = Quaternion.AngleAxis(angle, Vector3.forward);
+        // transform.rotation = lookRotation;
     }
 
+    public Quaternion LookAt2D(Vector3 current, Vector3 target)
+    {
+        Vector3 direction = target - current;
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        return Quaternion.AngleAxis(angle, Vector3.forward);
+    }
     void Update()
     {
         if (_health.Health == 0)
@@ -31,6 +50,7 @@ public class Rocket : MonoBehaviour
         else
         {
             _move.Direction = (tr.position - transform.position).normalized;
+            transform.rotation = Quaternion.Slerp(transform.rotation, LookAt2D(transform.position, tr.position), Time.deltaTime * 10f);
         }
     }
 

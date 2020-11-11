@@ -31,4 +31,11 @@ public class MoveBase : MonoBehaviour
                 Destroy(this.gameObject);
         }
     }
+    
+    //rotate
+//     transform.Rotate(Vector3(0, 0, 50));
+// //instead of :
+//     transform.eulerAngles = new Vector3 (0, 0, 50);
+// //or like you said
+//     transform.eulerAngles = Vector3.forward * 50;
 }
