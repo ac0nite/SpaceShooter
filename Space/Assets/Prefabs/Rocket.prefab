@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3117412174380078961}
   - component: {fileID: 3117412174380078960}
   - component: {fileID: 3117412174380078862}
+  - component: {fileID: 5383374910486604948}
   m_Layer: 0
   m_Name: Rocket
   m_TagString: Untagged
@@ -28,7 +29,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3117412174380078963}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.766, y: -0.46, z: 0}
+  m_LocalPosition: {x: -1.31, y: -0.46, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 3117412175600862157}
@@ -61,7 +62,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isRandomSpeed: 0
-  _maxSpeed: 5
+  _maxSpeed: 1
   _direction: {x: 1, y: 0}
   _speedRotation: 0
   _isDeleteObjectScope: 1
@@ -90,9 +91,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56b55c312917bd84e93439a4f8a57e8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _damage: 5
   _health: {fileID: 3117412174380078960}
-  _timeSearchEnemy: 1
+  _move: {fileID: 3117412174380078961}
+  _detect: {fileID: 5383374910486604948}
+  _timeStartDelayDetect: 1
+  _damage: 2
+--- !u!114 &5383374910486604948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3117412174380078963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3253236ae65888e49b3b6ad08529513f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3117412175600862158
 GameObject:
   m_ObjectHideFlags: 0
@@ -117,7 +132,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3117412175600862158}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 6, y: 6, z: 6}
   m_Children: []

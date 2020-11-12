@@ -4,16 +4,22 @@ using UnityEngine;
 
 public class Rocket : MonoBehaviour
 {
-    [SerializeField] private int _damage = 0;
     [SerializeField] private HealthComponent _health = null;
-    [SerializeField] private float _timeSearchEnemy = 1f;
     [SerializeField] private MoveBase _move = null;
-    private Transform tr = null;
+    [SerializeField] private RocketDetectEnemy _detect = null;
+
+    [SerializeField] private float _timeStartDelayDetect = 1f;
+    [SerializeField] private int _damage = 0;
+
+    private Transform _enemy = null;
+    private bool _isDetect = false;
     void Start()
     {
-        //StartCoroutine(AttackEnemy());
-        tr = GetComponent<RocketDetectEnemy>().Detect();
-        _move.Speed *= 1.8f;
+        StartCoroutine(AttackEnemy());
+
+        //tr = GetComponent<RocketDetectEnemy>().Detect();
+        //_move.Speed *= 1.8f;
+
         //transform.LookAt(Vector3.forward, Vector3.Cross(Vector3.forward, tr.position - transform.position));
         // var rotation = Quaternion.LookRotation(tr.position - transform.position);
         // transform.rotation = rotation;
@@ -40,24 +46,33 @@ public class Rocket : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
-        if(tr == null) return;
 
-        if (Vector2.Distance(transform.position, tr.position) <= 0.2f)
+        if (!_isDetect) return;
+
+        if (_enemy == null)
         {
-            tr.GetComponent<HealthComponent>().ChangeHealth(-_damage);
+            
+            _enemy = _detect.Detect();
+            if(_enemy != null) _move.Speed *= 1.5f;
+            return;
+        }
+
+        if (Vector2.Distance(transform.position, _enemy.position) <= 0.2f)
+        {
+            _enemy.GetComponent<HealthComponent>().ChangeHealth(-_damage);
             Destroy(this.gameObject);
         }
         else
         {
-            _move.Direction = (tr.position - transform.position).normalized;
-            transform.rotation = Quaternion.Slerp(transform.rotation, LookAt2D(transform.position, tr.position), Time.deltaTime * 10f);
+           // _move.Direction = (tr.position - transform.position).normalized;
+            transform.rotation = Quaternion.Slerp(transform.rotation, LookAt2D(transform.position, _enemy.position), Time.deltaTime * 5f);
         }
     }
 
     IEnumerator AttackEnemy()
     {
-
-        yield return new WaitForSeconds(_timeSearchEnemy);
-
+        yield return new WaitForSeconds(_timeStartDelayDetect);
+        _isDetect = true;
+        _enemy = _detect.Detect();
     }
 }
