@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class MinesSpawn : MonoBehaviour
 {
-
     [SerializeField] private bool isGenerate = true;
     [SerializeField] private float delayGenerateTime = 2f;
     private Vector2 scope = Vector2.zero;
@@ -28,9 +27,5 @@ public class MinesSpawn : MonoBehaviour
                 UnityEngine.Random.Range(-scope.y + 0.5f, +scope.y - 0.5f), 0f),
             Quaternion.identity
         );
-    }
-
-    void Update()
-    {
     }
 }

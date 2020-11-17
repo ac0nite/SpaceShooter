@@ -13,6 +13,11 @@ public class HealthComponent : MonoBehaviour
     {
         Health = _maxHealth;
     }
+
+    public void Crash()
+    {
+        ChangeHealth(-Health);
+    }
     public void ChangeHealth(int damage)
     {
         Health = Mathf.Clamp(Health + damage, 0, _maxHealth);

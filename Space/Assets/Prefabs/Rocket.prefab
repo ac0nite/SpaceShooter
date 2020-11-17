@@ -94,8 +94,9 @@ MonoBehaviour:
   _health: {fileID: 3117412174380078960}
   _move: {fileID: 3117412174380078961}
   _detect: {fileID: 5383374910486604948}
-  _timeStartDelayDetect: 1
-  _damage: 2
+  _acceleration: 3
+  _timeStartDelayDetect: 0.5
+  _damage: 5
 --- !u!114 &5383374910486604948
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -108,6 +109,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3253236ae65888e49b3b6ad08529513f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _angleDetect: 160
 --- !u!1 &3117412175600862158
 GameObject:
   m_ObjectHideFlags: 0

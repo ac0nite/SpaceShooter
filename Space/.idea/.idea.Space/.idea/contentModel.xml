@@ -10,24 +10,38 @@
         <e p="MinesSpawn.cs" t="Include" />
         <e p="Sripts" t="Include">
           <e p="Ammunitions" t="Include">
-            <e p="AmmunitionBase.cs" t="Include" />
+            <e p="Bonus" t="Include">
+              <e p="Bonus.cs" t="Include" />
+              <e p="BonusSpawn.cs" t="Include" />
+            </e>
             <e p="Bullet" t="Include">
               <e p="Bullet.cs" t="Include" />
+              <e p="TypeBullet.cs" t="Include" />
+            </e>
+            <e p="BulletBase.cs" t="Include" />
+            <e p="DetectEnemy.cs" t="Include" />
+            <e p="HardBullet" t="Include">
+              <e p="HardBullet.cs" t="Include" />
+              <e p="TypeHardBullet.cs" t="Include" />
             </e>
             <e p="mine" t="Include">
-              <e p="DetectionEnemy.cs" t="Include" />
-              <e p="MineController.cs" t="Include" />
+              <e p="DetectionEnemyMine.cs" t="Include" />
+              <e p="Mine.cs" t="Include" />
             </e>
-            <e p="Mine.cs" t="Include" />
-            <e p="Rocket.cs" t="Include" />
-            <e p="RocketDetectEnemy.cs" t="Include" />
+            <e p="PickUp" t="Include">
+              <e p="Pickup.cs" t="Include" />
+            </e>
+            <e p="Rocket" t="Include">
+              <e p="Rocket.cs" t="Include" />
+            </e>
             <e p="TypeAmmunition.cs" t="Include" />
-            <e p="Weapon.cs" t="Include" />
           </e>
           <e p="Background" t="Include">
             <e p="SpawnStars.cs" t="Include" />
           </e>
           <e p="Common" t="Include">
+            <e p="Ammunition.cs" t="Include" />
+            <e p="AmmunitionsComponent.cs" t="Include" />
             <e p="HealthComponent.cs" t="Include" />
             <e p="MoveBase.cs" t="Include" />
             <e p="SingletoneGameObject.cs" t="Include" />

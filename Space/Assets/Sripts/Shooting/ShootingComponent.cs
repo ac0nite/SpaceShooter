@@ -10,13 +10,19 @@ public class ShootingComponent : MonoBehaviour
     [SerializeField] private float _bulletDelayShooting = 0.2f;
     [SerializeField] private float _hardBulletDelayShooting = 0.3f;
     [SerializeField] private float _rocketDelayShooting = 0.5f;
+    [SerializeField] private AmmunitionsComponent _ammunitions = null;
     private Vector2 _direction = Vector2.right;
+    
+    [SerializeField] public TypeBullet CurrentBullet = TypeBullet.Default;
+    [SerializeField] public TypeHardBullet CurrentHardBullet = TypeHardBullet.Default;
 
     private bool isFireBullet = false;
     private bool isFireHardBullet = false;
     private bool isFireRocket = false;
 
     private bool isReadyFire = true;
+
+    private int CountRockets = 10;
 
     void Update()
     {
@@ -37,25 +43,22 @@ public class ShootingComponent : MonoBehaviour
     private void FireBullet(Vector2 direction)
     {
         if (!isReadyFire) return;
-
         isReadyFire = false;
-        var bullet = Instantiate(GameManager.Instance.Bullets[0], _shootingPointBullet.position, Quaternion.identity);
+        var bullet = Instantiate(GameManager.Instance.Bullets[GameManager.Instance.Bullets.FindIndex(0, b => b.Type == CurrentBullet)], _shootingPointBullet.position, Quaternion.identity);
         bullet.GetComponent<MoveBase>().Direction = direction;
-
-        //Debug.Log($"FireBullet", bullet.gameObject);
-
+        
         StartCoroutine(WaitingShoot(_bulletDelayShooting));
     }
 
     private void FireHardBullets(Vector2 direction)
     {
         if (!isReadyFire) return;
-
         isReadyFire = false;
-        var hard_bullet_1 = Instantiate(GameManager.Instance.Bullets[0], _shootingPointsHardBullet[0].position, Quaternion.identity);
+        var index = GameManager.Instance.HardBullets.FindIndex(0, b => b.Type == CurrentHardBullet);
+        var hard_bullet_1 = Instantiate(GameManager.Instance.HardBullets[index], _shootingPointsHardBullet[0].position, Quaternion.identity);
         hard_bullet_1.GetComponent<MoveBase>().Direction = direction;
 
-        var hard_bullet_2 = Instantiate(GameManager.Instance.Bullets[0], _shootingPointsHardBullet[1].position, Quaternion.identity);
+        var hard_bullet_2 = Instantiate(GameManager.Instance.HardBullets[index], _shootingPointsHardBullet[1].position, Quaternion.identity);
         hard_bullet_2.GetComponent<MoveBase>().Direction = direction;
 
         StartCoroutine(WaitingShoot(_hardBulletDelayShooting));
@@ -64,10 +67,14 @@ public class ShootingComponent : MonoBehaviour
     private void FireRocket(Vector2 direction)
     {
         if (!isReadyFire) return;
+        if (CountRockets == 0) return;
+        
         isReadyFire = false;
 
         var rocket = Instantiate(GameManager.Instance.Rockets[0], _shootingPointRocket.position, Quaternion.identity);
         rocket.GetComponent<MoveBase>().Direction = direction;
+
+        CountRockets--;
 
         StartCoroutine(WaitingShoot(_rocketDelayShooting));
     }

@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -9,6 +10,7 @@ public class ShipController : MonoBehaviour
     private Vector3 scope = Vector3.zero;
     [SerializeField] private HealthComponent _health = null;
     [SerializeField] private ShootingComponent _shooting = null;
+    [SerializeField] private Pickup _pickup = null;
 
     void Start()
     {
@@ -58,5 +60,28 @@ public class ShipController : MonoBehaviour
     public void FireRocket(bool isFire)
     {
         _shooting.Fire(TypeAmmunition.Rocket, Vector2.right, isFire);
+    }
+
+    private void Crash(GameObject other)
+    {
+        other.GetComponent<HealthComponent>()?.Crash();
+        //TODO: реализовать механизм уничтожения player
+    }
+
+    private void AddingResource(GameObject other)
+    {
+        Debug.Log($"AddingResource");
+        Destroy(other);
+    }
+    public void OnTriggerEnter2D(Collider2D other)
+    {
+        //Debug.Log($"Player OnTriggerEnter: {other.gameObject.layer} {LayerMask.NameToLayer()}");
+        if(other.gameObject.layer == LayerMask.NameToLayer("Ammunition"))
+            _pickup.PickupAmunitions(other.gameObject);
+        else if(other.gameObject.layer == LayerMask.NameToLayer("Enemy") || 
+                other.gameObject.layer == LayerMask.NameToLayer("Obstacles"))
+            Crash(other.gameObject);
+        else if(other.gameObject.layer == LayerMask.NameToLayer("Bonus"))
+            AddingResource(other.gameObject);
     }
 }

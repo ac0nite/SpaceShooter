@@ -29,21 +29,60 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Sripts/Ammunitions/Rocket.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Sripts/Common/MoveBase.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Sripts/Ammunitions/RocketDetectEnemy.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Sripts/Ammunitions/Rocket/Rocket.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/18B38ADE-9B85-49A5-AFF4-B379F33ECCEC/cf/4773248e/Collider.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Sripts/Common/AmmunitionsComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Sripts/Ammunitions/HardBullet/HardBullet.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/58A34B0A-618D-424B-B5FC-18BB9BCDAC20/97/32b4db9e/GameObject.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Sripts/Ammunitions/DetectEnemy.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Sripts/Ammunitions/Bullet/Bullet.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/MineScope.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/351E49E2-A5BF-4FD6-BEAB-B458CE2255F3/7b/960f42dd/Enumerable.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Sripts/Ammunitions/Mine.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Sripts/Ammunitions/mine/MineController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Sripts/Ammunitions/mine/DetectionEnemy.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Sripts/Ammunitions/Bonus/Bonus.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Sripts/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Sripts/Ammunitions/PickUp/Pickup.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Sripts/Ammunitions/HardBullet/TypeHardBullet.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Sripts/Enemy/EnemyController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Sripts/Common/Ammunition.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Sripts/Ammunitions/Mine/Mine.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Sripts/Enemy/EnemySpawn.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Sripts/Ammunitions/Bullet/TypeBullet.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Sripts/Common/HealthComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/MinesSpawn.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Sripts/Ammunitions/Bonus/BonusSpawn.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Sripts/Player/ShipController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Sripts/Common/MoveBase.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Sripts/Ammunitions/BulletBase.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Sripts/Ammunitions/Mine/DetectionEnemyMine.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Sripts/Shooting/ShootingComponent.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Assets/Sripts/Ammunitions/Mine.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sripts/Common/MoveBase.cs" />
         <option value="$PROJECT_DIR$/Assets/Sripts/Ammunitions/RocketDetectEnemy.cs" />
         <option value="$PROJECT_DIR$/Assets/Sripts/Ammunitions/Rocket.cs" />
-        <option value="$PROJECT_DIR$/Assets/Sripts/Common/MoveBase.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sripts/Ammunitions/Mine/DetectionEnemy.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sripts/Ammunitions/Mine/MineController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sripts/Ammunitions/DetectEnemy.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sripts/Ammunitions/Weapon.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sripts/Ammunitions/PickUp/Pickup.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sripts/Common/HealthComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sripts/Ammunitions/Bonus/Bonus.cs" />
+        <option value="$PROJECT_DIR$/Assets/MinesSpawn.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sripts/Ammunitions/Bonus/BonusSpawn.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sripts/Enemy/EnemySpawn.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sripts/Player/ShipController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sripts/Common/Ammunition.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sripts/Ammunitions/Bullet/TypeBullet.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sripts/Ammunitions/Bullet/TypeHardBullet.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sripts/Ammunitions/Bullet/Bullet.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sripts/Ammunitions/HardBullet/HardBullet.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sripts/Ammunitions/BulletBase.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sripts/GameManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sripts/Common/AmmunitionsComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sripts/Shooting/ShootingComponent.cs" />
       </list>
     </option>
   </component>
@@ -54,8 +93,8 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.3502052" />
-    <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.3002736" />
+    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.34994584" />
+    <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.30010834" />
     <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
@@ -87,6 +126,9 @@
       <updated>1605035698675</updated>
       <workItem from="1605035786287" duration="6573000" />
       <workItem from="1605117472203" duration="2957000" />
+      <workItem from="1605351687619" duration="8437000" />
+      <workItem from="1605361341839" duration="14119000" />
+      <workItem from="1605637588185" duration="8052000" />
     </task>
     <servers />
   </component>
@@ -111,74 +153,91 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="390" height="464" key="DebuggerActiveHint" timestamp="1605041872428">
-      <screen x="0" y="0" width="1536" height="834" />
+    <state width="488" height="585" key="DebuggerActiveHint" timestamp="1605401726100">
+      <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="390" height="464" key="DebuggerActiveHint/0.0.1536.834@0.0.1536.834" timestamp="1605041872428" />
-    <state width="1493" height="213" key="GridCell.Tab.0.bottom" timestamp="1605042853285">
-      <screen x="0" y="0" width="1536" height="834" />
+    <state width="488" height="585" key="DebuggerActiveHint/0.0.1920.1050@0.0.1920.1050" timestamp="1605401726100" />
+    <state width="1877" height="275" key="GridCell.Tab.0.bottom" timestamp="1605403540638">
+      <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1493" height="213" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1605042853285" />
-    <state width="1493" height="213" key="GridCell.Tab.0.center" timestamp="1605042853284">
-      <screen x="0" y="0" width="1536" height="834" />
+    <state width="1877" height="275" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1605403540638" />
+    <state width="1877" height="275" key="GridCell.Tab.0.center" timestamp="1605403540638">
+      <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1493" height="213" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1605042853284" />
-    <state width="1493" height="213" key="GridCell.Tab.0.left" timestamp="1605042853284">
-      <screen x="0" y="0" width="1536" height="834" />
+    <state width="1877" height="275" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1605403540638" />
+    <state width="1877" height="275" key="GridCell.Tab.0.left" timestamp="1605403540638">
+      <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1493" height="213" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1605042853284" />
-    <state width="1493" height="213" key="GridCell.Tab.0.right" timestamp="1605042853285">
-      <screen x="0" y="0" width="1536" height="834" />
+    <state width="1877" height="275" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1605403540638" />
+    <state width="1877" height="275" key="GridCell.Tab.0.right" timestamp="1605403540638">
+      <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1493" height="213" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1605042853285" />
-    <state width="1493" height="213" key="GridCell.Tab.1.bottom" timestamp="1605042853285">
-      <screen x="0" y="0" width="1536" height="834" />
+    <state width="1877" height="275" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1605403540638" />
+    <state width="1877" height="275" key="GridCell.Tab.1.bottom" timestamp="1605403540639">
+      <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1493" height="213" key="GridCell.Tab.1.bottom/0.0.1536.834@0.0.1536.834" timestamp="1605042853285" />
-    <state width="1493" height="213" key="GridCell.Tab.1.center" timestamp="1605042853285">
-      <screen x="0" y="0" width="1536" height="834" />
+    <state width="1877" height="275" key="GridCell.Tab.1.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1605403540639" />
+    <state width="1877" height="275" key="GridCell.Tab.1.center" timestamp="1605403540638">
+      <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1493" height="213" key="GridCell.Tab.1.center/0.0.1536.834@0.0.1536.834" timestamp="1605042853285" />
-    <state width="1493" height="213" key="GridCell.Tab.1.left" timestamp="1605042853285">
-      <screen x="0" y="0" width="1536" height="834" />
+    <state width="1877" height="275" key="GridCell.Tab.1.center/0.0.1920.1050@0.0.1920.1050" timestamp="1605403540638" />
+    <state width="1877" height="275" key="GridCell.Tab.1.left" timestamp="1605403540638">
+      <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1493" height="213" key="GridCell.Tab.1.left/0.0.1536.834@0.0.1536.834" timestamp="1605042853285" />
-    <state width="1493" height="213" key="GridCell.Tab.1.right" timestamp="1605042853285">
-      <screen x="0" y="0" width="1536" height="834" />
+    <state width="1877" height="275" key="GridCell.Tab.1.left/0.0.1920.1050@0.0.1920.1050" timestamp="1605403540638" />
+    <state width="1877" height="275" key="GridCell.Tab.1.right" timestamp="1605403540639">
+      <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1493" height="213" key="GridCell.Tab.1.right/0.0.1536.834@0.0.1536.834" timestamp="1605042853285" />
-    <state width="1493" height="213" key="GridCell.Tab.2.bottom" timestamp="1605042853287">
-      <screen x="0" y="0" width="1536" height="834" />
+    <state width="1877" height="275" key="GridCell.Tab.1.right/0.0.1920.1050@0.0.1920.1050" timestamp="1605403540639" />
+    <state width="1877" height="275" key="GridCell.Tab.2.bottom" timestamp="1605403540639">
+      <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1493" height="213" key="GridCell.Tab.2.bottom/0.0.1536.834@0.0.1536.834" timestamp="1605042853287" />
-    <state width="1493" height="213" key="GridCell.Tab.2.center" timestamp="1605042853286">
-      <screen x="0" y="0" width="1536" height="834" />
+    <state width="1877" height="275" key="GridCell.Tab.2.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1605403540639" />
+    <state width="1877" height="275" key="GridCell.Tab.2.center" timestamp="1605403540639">
+      <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1493" height="213" key="GridCell.Tab.2.center/0.0.1536.834@0.0.1536.834" timestamp="1605042853286" />
-    <state width="1493" height="213" key="GridCell.Tab.2.left" timestamp="1605042853286">
-      <screen x="0" y="0" width="1536" height="834" />
+    <state width="1877" height="275" key="GridCell.Tab.2.center/0.0.1920.1050@0.0.1920.1050" timestamp="1605403540639" />
+    <state width="1877" height="275" key="GridCell.Tab.2.left" timestamp="1605403540639">
+      <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1493" height="213" key="GridCell.Tab.2.left/0.0.1536.834@0.0.1536.834" timestamp="1605042853286" />
-    <state width="1493" height="213" key="GridCell.Tab.2.right" timestamp="1605042853286">
-      <screen x="0" y="0" width="1536" height="834" />
+    <state width="1877" height="275" key="GridCell.Tab.2.left/0.0.1920.1050@0.0.1920.1050" timestamp="1605403540639" />
+    <state width="1877" height="275" key="GridCell.Tab.2.right" timestamp="1605403540639">
+      <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1493" height="213" key="GridCell.Tab.2.right/0.0.1536.834@0.0.1536.834" timestamp="1605042853286" />
-    <state width="1493" height="213" key="GridCell.Tab.3.bottom" timestamp="1605042853288">
-      <screen x="0" y="0" width="1536" height="834" />
+    <state width="1877" height="275" key="GridCell.Tab.2.right/0.0.1920.1050@0.0.1920.1050" timestamp="1605403540639" />
+    <state width="1877" height="275" key="GridCell.Tab.3.bottom" timestamp="1605403540639">
+      <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1493" height="213" key="GridCell.Tab.3.bottom/0.0.1536.834@0.0.1536.834" timestamp="1605042853288" />
-    <state width="1493" height="213" key="GridCell.Tab.3.center" timestamp="1605042853287">
-      <screen x="0" y="0" width="1536" height="834" />
+    <state width="1877" height="275" key="GridCell.Tab.3.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1605403540639" />
+    <state width="1877" height="275" key="GridCell.Tab.3.center" timestamp="1605403540639">
+      <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1493" height="213" key="GridCell.Tab.3.center/0.0.1536.834@0.0.1536.834" timestamp="1605042853287" />
-    <state width="1493" height="213" key="GridCell.Tab.3.left" timestamp="1605042853287">
-      <screen x="0" y="0" width="1536" height="834" />
+    <state width="1877" height="275" key="GridCell.Tab.3.center/0.0.1920.1050@0.0.1920.1050" timestamp="1605403540639" />
+    <state width="1877" height="275" key="GridCell.Tab.3.left" timestamp="1605403540639">
+      <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1493" height="213" key="GridCell.Tab.3.left/0.0.1536.834@0.0.1536.834" timestamp="1605042853287" />
-    <state width="1493" height="213" key="GridCell.Tab.3.right" timestamp="1605042853287">
-      <screen x="0" y="0" width="1536" height="834" />
+    <state width="1877" height="275" key="GridCell.Tab.3.left/0.0.1920.1050@0.0.1920.1050" timestamp="1605403540639" />
+    <state width="1877" height="275" key="GridCell.Tab.3.right" timestamp="1605403540639">
+      <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1493" height="213" key="GridCell.Tab.3.right/0.0.1536.834@0.0.1536.834" timestamp="1605042853287" />
+    <state width="1877" height="275" key="GridCell.Tab.3.right/0.0.1920.1050@0.0.1920.1050" timestamp="1605403540639" />
     <state x="550" y="88" width="638" height="530" key="find.popup" timestamp="1605040618965">
       <screen x="0" y="0" width="1536" height="834" />
     </state>

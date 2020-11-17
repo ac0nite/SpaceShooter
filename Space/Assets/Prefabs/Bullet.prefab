@@ -90,10 +90,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 320472356004926927}
-  - component: {fileID: 320472356004926926}
   - component: {fileID: 8559194388140963574}
   - component: {fileID: 1643201744348107721}
-  - component: {fileID: 9025609919011289175}
+  - component: {fileID: 320472356004926926}
+  - component: {fileID: 7739298924709155118}
   m_Layer: 12
   m_Name: Bullet
   m_TagString: Untagged
@@ -116,23 +116,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &320472356004926926
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 320472356004926920}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eaba0b3194cf74e4e9a7f4b84d942979, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isRandomSpeed: 0
-  _maxSpeed: 5
-  _direction: {x: -1, y: 0}
-  _speedRotation: 0
-  _isDeleteObjectScope: 1
 --- !u!61 &8559194388140963574
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -180,7 +163,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &9025609919011289175
+--- !u!114 &320472356004926926
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -189,8 +172,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 320472356004926920}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2783e0d4ec6b4c14e926fe953c41a510, type: 3}
+  m_Script: {fileID: 11500000, guid: eaba0b3194cf74e4e9a7f4b84d942979, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Type: 0
+  isRandomSpeed: 0
+  _maxSpeed: 5
+  _direction: {x: -1, y: 0}
+  _speedRotation: 0
+  _isDeleteObjectScope: 1
+--- !u!114 &7739298924709155118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 320472356004926920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 219b1d8ed31f5f24c8dae0ff0d172d4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   _damage: 1
+  Type: 0

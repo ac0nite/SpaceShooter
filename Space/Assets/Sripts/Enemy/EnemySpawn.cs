@@ -24,12 +24,8 @@ public class EnemySpawn : MonoBehaviour
         var enemy = Instantiate(
             GameManager.Instance.Enemy[Random.Range(0, GameManager.Instance.Enemy.Count)],
             new Vector3(GameManager.Instance.GenerateTransform.position.x,
-                UnityEngine.Random.Range(-scope.y + 0.2f, +scope.y - 0.2f), 0f),
+                UnityEngine.Random.Range(-scope.y + 0.5f, +scope.y - 0.5f), 0f),
             Quaternion.identity
         );
-    }
-
-    void Update()
-    {
     }
 }

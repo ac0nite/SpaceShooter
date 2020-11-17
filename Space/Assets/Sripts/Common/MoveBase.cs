@@ -8,6 +8,7 @@ public class MoveBase : MonoBehaviour
     [SerializeField] private Vector2 _direction = Vector2.left;
     [SerializeField] private float _speedRotation = 0.0f;
     [SerializeField] private bool _isDeleteObjectScope = false;
+    private float _speed = 0f;
     
 
     public Vector2 Direction { set; get; }
@@ -15,14 +16,15 @@ public class MoveBase : MonoBehaviour
 
     void Awake()
     {
-        if (isRandomSpeed) Speed = Random.Range(0.5f, _maxSpeed);
-        else Speed = _maxSpeed;
+        if (isRandomSpeed) Speed  = _speed = Random.Range(0.5f, _maxSpeed);
+        else Speed  = _speed = _maxSpeed;
         Direction = _direction;
     }
     void Update()
     {
-        //Debug.Log($"Direction {Direction}");
-        transform.Translate(Direction * Speed * Time.deltaTime);
+        _speed = Mathf.Lerp(_speed, Speed, Time.deltaTime * 5f);
+        
+        transform.Translate(Direction * _speed * Time.deltaTime);
         //transform.Rotate();
         if (_isDeleteObjectScope)
         {

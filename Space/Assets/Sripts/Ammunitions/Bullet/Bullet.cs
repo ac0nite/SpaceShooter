@@ -2,23 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bullet : Weapon
+public class Bullet : BulletBase
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    protected override void Trigger(Collider2D collider)
-    {
-        base.Trigger(collider);
-
-    }
+    [SerializeField] public TypeBullet Type = TypeBullet.Default;
 }
