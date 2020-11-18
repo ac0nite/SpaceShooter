@@ -22,7 +22,7 @@ public class ShootingComponent : MonoBehaviour
 
     private bool isReadyFire = true;
 
-    private int CountRockets = 10;
+    [SerializeField] public int CountRockets = 10;
 
     void Update()
     {

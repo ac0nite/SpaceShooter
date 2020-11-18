@@ -18,7 +18,7 @@ public class DetectionEnemyMine : MonoBehaviour
         {
             if (Vector2.Distance(_ship.transform.position, transform.position) <= _distanceToActive)
             {
-                _ship.GetComponent<HealthComponent>().ChangeHealth(-_damage);
+                _ship.GetComponent<HealthComponent>()?.ChangeHealth(-_damage);
                 Destroy(this.gameObject);
             }
             else

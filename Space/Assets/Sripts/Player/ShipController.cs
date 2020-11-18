@@ -8,8 +8,8 @@ public class ShipController : MonoBehaviour
 
     [SerializeField] private float _speed = 1f;
     private Vector3 scope = Vector3.zero;
-    [SerializeField] private HealthComponent _health = null;
-    [SerializeField] private ShootingComponent _shooting = null;
+    [SerializeField] public HealthComponent _health = null;
+    [SerializeField] public ShootingComponent _shooting = null;
     [SerializeField] private Pickup _pickup = null;
 
     void Start()

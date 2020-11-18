@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class HealthComponent : MonoBehaviour
 {
-    [SerializeField] private int _maxHealth = 2;
+    [SerializeField] private int _maxHealth = 10;
     public Action EventDie;
     public int Health { get; private set; }
 
