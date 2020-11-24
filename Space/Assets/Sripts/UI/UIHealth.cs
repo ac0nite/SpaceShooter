@@ -15,19 +15,15 @@ public class UIHealth : MonoBehaviour
         set
         {
             if (_currentHealth.Count > value)
-            {
-                //Debug.Log($"remove: {_currentHealth.Count - value}");
-                //_currentHealth.RemoveRange(0, _currentHealth.Count - value);
                 Remove(_currentHealth.Count - value);
-            }
             else
                 Add(value - _currentHealth.Count);
         }
     }
 
-    public void Add(int count)
+    private void Add(int count)
     {
-        if(count > _maxHealth) return;
+        if(count >= _maxHealth) return;
 
         for (int i = 0; i < count; i++)
         {
@@ -37,12 +33,13 @@ public class UIHealth : MonoBehaviour
 
     private void Remove(int count)
     {
-        for (int i = 0; i < count; i++)
+        var _count = (count > _currentHealth.Count) ? _currentHealth.Count : count;
+
+        for (int i = 0; i < _count; i++)
         {
             Destroy(_currentHealth[i].gameObject);
             _currentHealth.RemoveAt(i);
         }
-        //_currentHealth.RemoveRange(0, _currentHealth.Count - count);
     }
 
     public void Change(int health)
@@ -55,11 +52,8 @@ public class UIHealth : MonoBehaviour
             Add(_currentHealth.Count - new_count);
     }
 
-
-    
     void Start()
     {
         Add(_maxHealth);
     }
-
 }
