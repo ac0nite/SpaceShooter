@@ -7,6 +7,8 @@ public class EnemyController : MonoBehaviour
     [SerializeField] private EnemyType Type = EnemyType.Light;
     [SerializeField] private HealthComponent _health = null;
     [SerializeField] private ShootingComponent _shooting = null;
+    [SerializeField] private ParticleSystem _explosion = null;
+    [SerializeField] private GameObject _model = null;
 
     private void Awake()
     {
@@ -28,8 +30,19 @@ public class EnemyController : MonoBehaviour
     {
         if (_health.Health == 0)
         {
-            Debug.Log($"Enemy die!", this.gameObject);
-            Destroy(this.gameObject);
+            if (_explosion != null)
+            {
+                // this.enabled = false;
+                _model.SetActive(false);
+                _explosion.Play();
+                Destroy(this.gameObject, t: 1f);
+            }
+            else
+            {
+                Destroy(this.gameObject);
+            }
+            
+            //Debug.Log($"Enemy die!", this.gameObject);
         }
     }
 }

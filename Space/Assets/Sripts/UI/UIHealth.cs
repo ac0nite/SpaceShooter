@@ -10,6 +10,12 @@ public class UIHealth : MonoBehaviour
     [SerializeField] private Image _healthPrefab = null;
     private List<Image> _currentHealth = new List<Image>();
 
+    void Start()
+    {
+        Debug.Log($"Add(_maxHealth)");
+        Add(_maxHealth);
+    }
+
     public int UiHealth
     {
         set
@@ -23,7 +29,7 @@ public class UIHealth : MonoBehaviour
 
     private void Add(int count)
     {
-        if(count >= _maxHealth) return;
+        if(count > _maxHealth) return;
 
         for (int i = 0; i < count; i++)
         {
@@ -50,10 +56,5 @@ public class UIHealth : MonoBehaviour
             _currentHealth.RemoveRange(0, _currentHealth.Count - new_count);
         else
             Add(_currentHealth.Count - new_count);
-    }
-
-    void Start()
-    {
-        Add(_maxHealth);
     }
 }
