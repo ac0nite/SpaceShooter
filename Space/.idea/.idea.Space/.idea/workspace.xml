@@ -80,9 +80,10 @@
         <option value="$PROJECT_DIR$/Assets/Sripts/Ammunitions/Bullet/Bullet.cs" />
         <option value="$PROJECT_DIR$/Assets/Sripts/Ammunitions/HardBullet/HardBullet.cs" />
         <option value="$PROJECT_DIR$/Assets/Sripts/Ammunitions/BulletBase.cs" />
-        <option value="$PROJECT_DIR$/Assets/Sripts/GameManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Sripts/Common/AmmunitionsComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Sripts/Shooting/ShootingComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sripts/GameManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sripts/Enemy/EnemyController.cs" />
       </list>
     </option>
   </component>
@@ -129,6 +130,7 @@
       <workItem from="1605351687619" duration="8437000" />
       <workItem from="1605361341839" duration="14119000" />
       <workItem from="1605637588185" duration="8052000" />
+      <workItem from="1606417544646" duration="1465000" />
     </task>
     <servers />
   </component>

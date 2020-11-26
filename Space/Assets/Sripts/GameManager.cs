@@ -15,20 +15,4 @@ public class GameManager : SingletoneGameObject<GameManager>
     [SerializeField] public List<Mine> Mines = null;
     [SerializeField] public List<Rocket> Rockets = null;
     [SerializeField] public List<Bonus> Bonus = null;
-
-    [SerializeField] private ParticleSystem explosion = null;
-
-    void Start()
-    {
-        StartCoroutine(test());
-    }
-
-    IEnumerator test()
-    {
-        for (int i = 0; i < 10; i++)
-        {
-            yield return new WaitForSeconds(0.5f);
-            explosion.Play();
-        }
-    }
 }

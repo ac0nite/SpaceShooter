@@ -9,7 +9,7 @@ public class EnemyController : MonoBehaviour
     [SerializeField] private ShootingComponent _shooting = null;
     [SerializeField] private ParticleSystem _explosion = null;
     [SerializeField] private GameObject _model = null;
-
+    private bool _isRemove = false;
     private void Awake()
     {
 
@@ -32,17 +32,24 @@ public class EnemyController : MonoBehaviour
         {
             if (_explosion != null)
             {
-                // this.enabled = false;
-                _model.SetActive(false);
-                _explosion.Play();
-                Destroy(this.gameObject, t: 1f);
+                if(!_isRemove)
+                    StartCoroutine(DestroyShip());
             }
             else
             {
                 Destroy(this.gameObject);
             }
-            
-            //Debug.Log($"Enemy die!", this.gameObject);
         }
+    }
+
+    IEnumerator DestroyShip()
+    {
+        _isRemove = true;
+        
+        _explosion.Play();
+        yield return null;
+        yield return null;
+        _model.SetActive(false);
+        Destroy(this.gameObject, t: _explosion.main.duration);
     }
 }
