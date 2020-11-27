@@ -8,8 +8,10 @@ public class MoveBase : MonoBehaviour
     [SerializeField] private Vector2 _direction = Vector2.left;
     [SerializeField] private float _speedRotation = 0.0f;
     [SerializeField] private bool _isDeleteObjectScope = false;
+    [SerializeField] private bool _rotate = false;
+    [SerializeField] [Range(1f, 20f)] private float _speedRotate = 1f;
     private float _speed = 0f;
-    
+    private Rigidbody2D _rg = null;
 
     public Vector2 Direction { set; get; }
     public float Speed { set; get; }
@@ -19,6 +21,7 @@ public class MoveBase : MonoBehaviour
         if (isRandomSpeed) Speed  = _speed = Random.Range(0.5f, _maxSpeed);
         else Speed  = _speed = _maxSpeed;
         Direction = _direction;
+        _rg = GetComponentInChildren<Rigidbody2D>();
     }
     void Update()
     {
@@ -32,6 +35,10 @@ public class MoveBase : MonoBehaviour
                transform.position.x >= GameManager.Instance.GenerateTransform.position.x + 0.1f)
                 Destroy(this.gameObject);
         }
+
+        if (_rotate) 
+            //transform.Rotate(Vector3.forward, _speedRotate * Time.deltaTime);
+            _rg.transform.Rotate(Vector3.forward, _speedRotate * Time.deltaTime);
     }
     
     //rotate

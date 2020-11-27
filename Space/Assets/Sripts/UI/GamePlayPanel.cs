@@ -17,10 +17,9 @@ public class GamePlayPanel : MonoBehaviour
 
     void Update()
     {
-        //Debug.Log($"GameManager.Instance.Player._health.Health: {GameManager.Instance.Player._health.Health}");
-        _health.UiHealth = GameManager.Instance.Player._health.Health;
+        _health.UiHealth = GameManager.Instance.Player.Health.Health;
         _lifeTxt.text = GameManager.Instance.LIFE.ToString();
-        _rocketsTxt.text = GameManager.Instance.Player._shooting.CountRockets.ToString();
+        _rocketsTxt.text = GameManager.Instance.Player.Ammunitions.CountRockets.ToString();
     }
 
     public void OnPause()

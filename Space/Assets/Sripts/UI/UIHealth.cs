@@ -12,7 +12,7 @@ public class UIHealth : MonoBehaviour
 
     void Start()
     {
-        Debug.Log($"Add(_maxHealth)");
+       // Debug.Log($"Add(_maxHealth)");
         Add(_maxHealth);
     }
 
@@ -43,9 +43,10 @@ public class UIHealth : MonoBehaviour
 
         for (int i = 0; i < _count; i++)
         {
+            //Debug.Log($"{i}");
             Destroy(_currentHealth[i].gameObject);
-            _currentHealth.RemoveAt(i);
         }
+        _currentHealth.RemoveRange(0, _count);
     }
 
     public void Change(int health)

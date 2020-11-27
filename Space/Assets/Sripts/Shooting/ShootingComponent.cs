@@ -22,8 +22,6 @@ public class ShootingComponent : MonoBehaviour
 
     private bool isReadyFire = true;
 
-    [SerializeField] public int CountRockets = 10;
-
     void Update()
     {
         if (isFireBullet) FireBullet(_direction);
@@ -67,14 +65,14 @@ public class ShootingComponent : MonoBehaviour
     private void FireRocket(Vector2 direction)
     {
         if (!isReadyFire) return;
-        if (CountRockets == 0) return;
+        if (_ammunitions.CountRockets == 0) return;
         
         isReadyFire = false;
 
         var rocket = Instantiate(GameManager.Instance.Rockets[0], _shootingPointRocket.position, Quaternion.identity);
         rocket.GetComponent<MoveBase>().Direction = direction;
 
-        CountRockets--;
+        _ammunitions.CountRockets--;
 
         StartCoroutine(WaitingShoot(_rocketDelayShooting));
     }

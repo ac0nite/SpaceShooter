@@ -9,6 +9,9 @@ public class DetectionEnemyMine : MonoBehaviour
     [SerializeField] private float _distanceToActive = 0.5f;
     [SerializeField] private float _distanceToAttack = 2f;
     [SerializeField] private float _acceleration = 1.5f;
+    [SerializeField] private ParticleSystem _explosion = null;
+    private bool _isDestroy = false;
+    [SerializeField] private GameObject _model = null;
     private GameObject _ship = null;
     private float distance = 0f;
 
@@ -16,10 +19,14 @@ public class DetectionEnemyMine : MonoBehaviour
     {
         if (_ship != null)
         {
-            if (Vector2.Distance(_ship.transform.position, transform.position) <= _distanceToActive)
+            if (!_isDestroy  && Vector2.Distance(_ship.transform.position, transform.position) <= _distanceToActive)
             {
+                _isDestroy = true;
+                //_move.Speed = 0f;
+                _model.SetActive(false);
                 _ship.GetComponent<HealthComponent>()?.ChangeHealth(-_damage);
-                Destroy(this.gameObject);
+                _explosion.Play();
+                Destroy(this.gameObject, _explosion.main.duration);
             }
             else
             {
@@ -30,15 +37,17 @@ public class DetectionEnemyMine : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collider)
     {
+        Debug.Log($"Mines OnTriggerEnter2D");
         _ship = collider.gameObject;
         _move.Speed *= _acceleration;
     }
 
     private void OnTriggerExit2D(Collider2D collider)
     {
+        Debug.Log($"Mines OnTriggerExit2D");
+
         _ship = null;
         _move.Direction = Vector2.left; 
         _move.Speed /= _acceleration;
-
     }
 }

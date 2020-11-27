@@ -22,7 +22,7 @@ public class EnemyController : MonoBehaviour
 
     private void Fire()
     {
-        //_shooting.FireBullet(Vector2.left);
+        //Shooting.FireBullet(Vector2.left);
         _shooting.Fire(TypeAmmunition.Bullet, Vector2.left, true);
     }
 

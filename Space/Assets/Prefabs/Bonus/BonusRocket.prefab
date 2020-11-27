@@ -274,7 +274,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Type: 2
-  Count: 5
+  Count: 3
 --- !u!1 &3659899161462951709
 GameObject:
   m_ObjectHideFlags: 0

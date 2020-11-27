@@ -8,16 +8,15 @@ public class ShipController : MonoBehaviour
 
     [SerializeField] private float _speed = 1f;
     private Vector3 scope = Vector3.zero;
-    [SerializeField] public HealthComponent _health = null;
-    [SerializeField] public ShootingComponent _shooting = null;
-    [SerializeField] private Pickup _pickup = null;
+    [SerializeField] public HealthComponent Health = null;
+    [SerializeField] public ShootingComponent Shooting = null;
+    [SerializeField] public AmmunitionsComponent Ammunitions = null;
 
     void Start()
     {
         scope = Camera.main.ViewportToWorldPoint(new Vector3(1, 1, Camera.main.nearClipPlane));
 
-        //InvokeRepeating("Fire", 0.5f, 0.4f);
-        
+        Ammunitions = GetComponent<AmmunitionsComponent>();
     }
 
     void Update()
@@ -27,8 +26,8 @@ public class ShipController : MonoBehaviour
             Mathf.Clamp(transform.position.y, -scope.y, +scope.y));
 
 
-       //_shooting.FireRockets(Vector2.right);
-       //_shooting.FireBullet(Vector2.right);
+       //Shooting.FireRockets(Vector2.right);
+       //Shooting.FireBullet(Vector2.right);
     }
 
     public void Move(Vector2 direction)
@@ -49,17 +48,17 @@ public class ShipController : MonoBehaviour
     //DEBUG
     public void FireBullet(bool isFire)
     {
-        _shooting.Fire(TypeAmmunition.Bullet, Vector2.right, isFire);
+        Shooting.Fire(TypeAmmunition.Bullet, Vector2.right, isFire);
     }
 
     public void FireHardBullets(bool isFire)
     {
-        _shooting.Fire(TypeAmmunition.HardBullet, Vector2.right, isFire);
+        Shooting.Fire(TypeAmmunition.HardBullet, Vector2.right, isFire);
     }
 
     public void FireRocket(bool isFire)
     {
-        _shooting.Fire(TypeAmmunition.Rocket, Vector2.right, isFire);
+        Shooting.Fire(TypeAmmunition.Rocket, Vector2.right, isFire);
     }
 
     private void Crash(GameObject other)
@@ -76,9 +75,7 @@ public class ShipController : MonoBehaviour
     public void OnTriggerEnter2D(Collider2D other)
     {
         //Debug.Log($"Player OnTriggerEnter: {other.gameObject.layer} {LayerMask.NameToLayer()}");
-        if(other.gameObject.layer == LayerMask.NameToLayer("Ammunition"))
-            _pickup.PickupAmunitions(other.gameObject);
-        else if(other.gameObject.layer == LayerMask.NameToLayer("Enemy") || 
+        if(other.gameObject.layer == LayerMask.NameToLayer("Enemy") || 
                 other.gameObject.layer == LayerMask.NameToLayer("Obstacles"))
             Crash(other.gameObject);
         else if(other.gameObject.layer == LayerMask.NameToLayer("Bonus"))

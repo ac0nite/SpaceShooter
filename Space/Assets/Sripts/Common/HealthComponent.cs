@@ -21,7 +21,7 @@ public class HealthComponent : MonoBehaviour
     public void ChangeHealth(int damage)
     {
         Health = Mathf.Clamp(Health + damage, 0, _maxHealth);
-        Debug.Log($"Health: {Health}");
+        //Debug.Log($"Health: {Health}");
         if (Health == 0)
             EventDie?.Invoke();
     }
