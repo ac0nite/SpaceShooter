@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HardBullet : BulletBase
+public class HardBullet : MonoBehaviour
 {
     [SerializeField] public TypeHardBullet Type = TypeHardBullet.Default;
 }
