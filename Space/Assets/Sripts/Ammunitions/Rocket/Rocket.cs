@@ -17,22 +17,6 @@ public class Rocket : MonoBehaviour
     void Start()
     {
         StartCoroutine(AttackEnemy());
-
-        //tr = GetComponent<RocketDetectEnemy>().Detect();
-        //_move.Speed *= 1.8f;
-
-        //transform.LookAt(Vector3.forward, Vector3.Cross(Vector3.forward, tr.position - transform.position));
-        // var rotation = Quaternion.LookRotation(tr.position - transform.position);
-        // transform.rotation = rotation;
-        /*  Vector3 direction = (currDest - transform.position).normalized;
-            float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-            Quaternion lookRotation = Quaternion.AngleAxis(angle, Vector3.forward);
-            */
-
-        // Vector3 direction = tr.position - transform.position;
-        // float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-        // Quaternion lookRotation = Quaternion.AngleAxis(angle, Vector3.forward);
-        // transform.rotation = lookRotation;
     }
 
     public Quaternion LookAt2D(Vector3 current, Vector3 target)
@@ -77,7 +61,7 @@ public class Rocket : MonoBehaviour
 
     private void Detect()
     {
-        _enemy = _detect.Detect();
+        _enemy = _detect.Detect(LayerMask.GetMask("Enemy", "Mine"));
         if(_enemy != null) _move.Speed *= _acceleration;
     }
 }

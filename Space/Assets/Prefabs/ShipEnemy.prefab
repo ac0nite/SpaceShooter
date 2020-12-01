@@ -185,14 +185,14 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 631065816692818037}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 0.27545622
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -215,6 +215,8 @@ MonoBehaviour:
   _direction: {x: -1, y: 0}
   _speedRotation: 0
   _isDeleteObjectScope: 1
+  _rotate: 0
+  _speedRotate: 1
 --- !u!114 &631065816692818025
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -249,7 +251,6 @@ MonoBehaviour:
   _ammunitions: {fileID: 0}
   CurrentBullet: 0
   CurrentHardBullet: 0
-  CountRockets: 10
 --- !u!114 &631065816692818031
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -9,7 +9,7 @@ public class MoveBase : MonoBehaviour
     [SerializeField] private float _speedRotation = 0.0f;
     [SerializeField] private bool _isDeleteObjectScope = false;
     [SerializeField] private bool _rotate = false;
-    [SerializeField] [Range(1f, 20f)] private float _speedRotate = 1f;
+    [SerializeField] [Range(1f, 40f)] private float _speedRotate = 1f;
     private float _speed = 0f;
     private Rigidbody2D _rg = null;
 

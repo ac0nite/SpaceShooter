@@ -37,6 +37,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Sripts/Ammunitions/DetectEnemy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Sripts/Ammunitions/Bullet/Bullet.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/MineScope.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Asset/2D Pixel Spaceships (2 Small Ships + Explosions)/Scripts/SceneController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/351E49E2-A5BF-4FD6-BEAB-B458CE2255F3/7b/960f42dd/Enumerable.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Sripts/Ammunitions/Bonus/Bonus.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Sripts/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
@@ -60,12 +61,10 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Assets/Sripts/Ammunitions/Mine.cs" />
-        <option value="$PROJECT_DIR$/Assets/Sripts/Common/MoveBase.cs" />
         <option value="$PROJECT_DIR$/Assets/Sripts/Ammunitions/RocketDetectEnemy.cs" />
         <option value="$PROJECT_DIR$/Assets/Sripts/Ammunitions/Rocket.cs" />
         <option value="$PROJECT_DIR$/Assets/Sripts/Ammunitions/Mine/DetectionEnemy.cs" />
         <option value="$PROJECT_DIR$/Assets/Sripts/Ammunitions/Mine/MineController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Sripts/Ammunitions/DetectEnemy.cs" />
         <option value="$PROJECT_DIR$/Assets/Sripts/Ammunitions/Weapon.cs" />
         <option value="$PROJECT_DIR$/Assets/Sripts/Ammunitions/PickUp/Pickup.cs" />
         <option value="$PROJECT_DIR$/Assets/Sripts/Common/HealthComponent.cs" />
@@ -77,13 +76,18 @@
         <option value="$PROJECT_DIR$/Assets/Sripts/Common/Ammunition.cs" />
         <option value="$PROJECT_DIR$/Assets/Sripts/Ammunitions/Bullet/TypeBullet.cs" />
         <option value="$PROJECT_DIR$/Assets/Sripts/Ammunitions/Bullet/TypeHardBullet.cs" />
-        <option value="$PROJECT_DIR$/Assets/Sripts/Ammunitions/Bullet/Bullet.cs" />
         <option value="$PROJECT_DIR$/Assets/Sripts/Ammunitions/HardBullet/HardBullet.cs" />
-        <option value="$PROJECT_DIR$/Assets/Sripts/Ammunitions/BulletBase.cs" />
         <option value="$PROJECT_DIR$/Assets/Sripts/Common/AmmunitionsComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Sripts/Shooting/ShootingComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Sripts/GameManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Sripts/Enemy/EnemyController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sripts/Common/MoveBase.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sripts/Ammunitions/Mine/DetectionEnemyMine.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sripts/Ammunitions/BulletBase.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sripts/Ammunitions/Bullet/Bullet.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sripts/Ammunitions/Rocket/Rocket.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sripts/Ammunitions/DetectEnemy.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sripts/Ammunitions/Mine/Mine.cs" />
       </list>
     </option>
   </component>
@@ -131,6 +135,8 @@
       <workItem from="1605361341839" duration="14119000" />
       <workItem from="1605637588185" duration="8052000" />
       <workItem from="1606417544646" duration="1465000" />
+      <workItem from="1606668668340" duration="10590000" />
+      <workItem from="1606852496959" duration="3804000" />
     </task>
     <servers />
   </component>
@@ -240,10 +246,15 @@
     </state>
     <state width="1493" height="213" key="GridCell.Tab.3.right/0.0.1536.834@0.0.1536.834" timestamp="1605042853287" />
     <state width="1877" height="275" key="GridCell.Tab.3.right/0.0.1920.1050@0.0.1920.1050" timestamp="1605403540639" />
-    <state x="550" y="88" width="638" height="530" key="find.popup" timestamp="1605040618965">
-      <screen x="0" y="0" width="1536" height="834" />
+    <state x="92" y="92" width="1736" height="866" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1606672837252">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="92" y="92" width="1736" height="866" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1606672837252" />
+    <state x="688" y="111" width="798" height="668" key="find.popup" timestamp="1606854961935">
+      <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="550" y="88" width="638" height="530" key="find.popup/0.0.1536.834@0.0.1536.834" timestamp="1605040618965" />
+    <state x="688" y="111" width="798" height="668" key="find.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1606854961935" />
     <state x="431" y="155" key="search.everywhere.popup" timestamp="1605042326484">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
