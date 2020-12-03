@@ -3,18 +3,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Mine : MonoBehaviour
+public class Mine : Weapon
 {
-    [SerializeField] private ParticleSystem _explosion = null;
-    [SerializeField] private GameObject _model = null;
-    [SerializeField] private HealthComponent _health = null;
-    [SerializeField] private int _damage = 4;
+   // [SerializeField] private GameObject _fx = null;
+   // [SerializeField] private GameObject _model = null;
+    //[SerializeField] private HealthComponent _health = null;
+    //[SerializeField] private int _damage = 4;
     [SerializeField] private float _acceleration = 3f;
     private DetectEnemy _detect = null;
     private MoveBase _move = null;
     private Transform _enemy = null;
     private float _speed = 0f;
-    private Vector2 _pointCollision = Vector2.zero;
+   // private Vector2 _pointCollision = Vector2.zero;
 
     private void Awake()
     {
@@ -28,23 +28,27 @@ public class Mine : MonoBehaviour
         _speed = _move.Speed;
     }
 
-    private void OnDestroy()
-    {
-       // _health.EventDie -= OnDie;
-       if (_pointCollision != Vector2.zero)
-       {
-           GetComponent<Collider2D>().enabled = false;
-           _model.SetActive(false);
-       }
-    }
+    //private void OnDestroy()
+    //{
+    //   // _health.EventDie -= OnDie;
+    //   if (_pointCollision != Vector2.zero)
+    //   {
+    //       //GetComponent<Collider2D>().enabled = false;
+    //       //_model.SetActive(false);
+    //       var fx = Instantiate(_fx, _pointCollision, Quaternion.identity, GameManager.Instance.transform);
+    //       fx.GetComponent<ParticleSystem>().Play();
+    //       Destroy(fx, fx.GetComponent<ParticleSystem>().main.duration);
+    //   }
+    //}
 
     private void OnDie()
     {
-        GetComponent<Collider2D>().enabled = false;
-        _model.SetActive(false);
-        _explosion.Play();
-        Destroy(this.gameObject, _explosion.main.duration);
+        //GetComponent<Collider2D>().enabled = false;
+        //_model.SetActive(false);
+        //_explosion.Play();
+        //Destroy(this.gameObject, _explosion.main.duration);
     }
+
     void Update()
     {
         if (Detect())
@@ -70,12 +74,12 @@ public class Mine : MonoBehaviour
         return true;
     }
 
-    private void OnCollisionEnter2D(Collision2D other)
-    {
-        _pointCollision = other.contacts[0].point;
-        other.gameObject.GetComponent<HealthComponent>()?.ChangeHealth(-_damage);
-        Destroy(other.gameObject);
-    }
+    //private void OnCollisionEnter2D(Collision2D other)
+    //{
+    //    _pointCollision = other.contacts[0].point;
+    //    other.gameObject.GetComponent<HealthComponent>()?.ChangeHealth(-_damage);
+    //    Destroy(other.gameObject);
+    //}
 
     // private void OnTriggerEnter2D(Collider2D collider)
     // {

@@ -4,29 +4,29 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Bullet : MonoBehaviour
+public class Bullet : Weapon
 {
     [SerializeField] public TypeBullet Type = TypeBullet.Default;
-    [SerializeField] private int _damage = 0;
-    [SerializeField] private GameObject _fxPrefab = null;
-    private Vector3 _pointCollision = Vector3.zero;
+    //[SerializeField] private int _damage = 0;
+    //[SerializeField] private GameObject _fxPrefab = null;
+    //private Vector3 _pointCollision = Vector3.zero;
 
-    private void OnCollisionEnter2D(Collision2D other)
-    {
-        other.gameObject.GetComponent<HealthComponent>()?.ChangeHealth(-_damage);
-        _pointCollision = other.contacts[0].point;
-        Destroy(this.gameObject);
-    }
+    //private void OnCollisionEnter2D(Collision2D other)
+    //{
+    //    other.gameObject.GetComponent<HealthComponent>()?.ChangeHealth(-_damage);
+    //    _pointCollision = other.contacts[0].point;
+    //    Destroy(this.gameObject);
+    //}
 
-    private void OnDestroy()
-    {
-        if (_pointCollision != Vector3.zero)
-        {
-            var fx = Instantiate(_fxPrefab, _pointCollision, Quaternion.identity, GameManager.Instance.transform);
-            fx.GetComponent<ParticleSystem>().Play();
-            Destroy(fx, fx.GetComponent<ParticleSystem>().main.duration);
-        }
-    }
+    //private void OnDestroy()
+    //{
+    //    if (_pointCollision != Vector3.zero)
+    //    {
+    //        var fx = Instantiate(_fxPrefab, _pointCollision, Quaternion.identity, GameManager.Instance.transform);
+    //        fx.GetComponent<ParticleSystem>().Play();
+    //        Destroy(fx, fx.GetComponent<ParticleSystem>().main.duration);
+    //    }
+    //}
 
     // public virtual void OnTriggerEnter2D(Collider2D collider)
     // {

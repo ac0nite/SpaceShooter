@@ -70,9 +70,22 @@ public class ShipController : MonoBehaviour
     private void AddingResource(GameObject other)
     {
         Debug.Log($"AddingResource");
+        var bonus = other.GetComponent<Bonus>();
+        switch (bonus.Type)
+        {
+            case TypeAmmunition.Life:
+                GameManager.Instance.LIFE += bonus.Count;
+                break;
+            case TypeAmmunition.Rocket:
+                Ammunitions.CountRockets += bonus.Count;
+                break;
+            case TypeAmmunition.Health:
+                Health.ChangeHealth(+bonus.Count);
+                break;
+        }
         Destroy(other);
     }
-    public void OnTriggerEnter2D(Collider2D other)
+    public void OnCollisionEnter2D(Collision2D other)
     {
         //Debug.Log($"Player OnTriggerEnter: {other.gameObject.layer} {LayerMask.NameToLayer()}");
         if(other.gameObject.layer == LayerMask.NameToLayer("Enemy") || 
