@@ -35,19 +35,24 @@ public class DetectionEnemyMine : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collider)
-    {
-        Debug.Log($"Mines OnTriggerEnter2D");
-        _ship = collider.gameObject;
-        _move.Speed *= _acceleration;
-    }
+    // private void OnTriggerEnter2D(Collider2D collider)
+    // {
+    //     Debug.Log($"Mines OnTriggerEnter2D");
+    //     _ship = collider.gameObject;
+    //     _move.Speed *= _acceleration;
+    // }
+    //
+    // private void OnTriggerExit2D(Collider2D collider)
+    // {
+    //     Debug.Log($"Mines OnTriggerExit2D");
+    //
+    //     _ship = null;
+    //     _move.Direction = Vector2.left; 
+    //     _move.Speed /= _acceleration;
+    // }
 
-    private void OnTriggerExit2D(Collider2D collider)
+    void LateUpdate()
     {
-        Debug.Log($"Mines OnTriggerExit2D");
-
-        _ship = null;
-        _move.Direction = Vector2.left; 
-        _move.Speed /= _acceleration;
+        
     }
 }

@@ -67,6 +67,8 @@ MonoBehaviour:
   _direction: {x: 1, y: 0}
   _speedRotation: 0
   _isDeleteObjectScope: 1
+  _rotate: 0
+  _speedRotate: 1
 --- !u!114 &3117412174380078960
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -110,7 +112,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3253236ae65888e49b3b6ad08529513f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _angleDetect: 160
+  _angle: 150
+  _radius: 10
+  _scopeMonitoring: 0
 --- !u!1 &3117412175600862158
 GameObject:
   m_ObjectHideFlags: 0
