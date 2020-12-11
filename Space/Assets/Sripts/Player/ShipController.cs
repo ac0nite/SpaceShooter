@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class ShipController : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class ShipController : MonoBehaviour
     [SerializeField] public HealthComponent Health = null;
     [SerializeField] public ShootingComponent Shooting = null;
     [SerializeField] public AmmunitionsComponent Ammunitions = null;
+    [SerializeField] private AudioSource _audioSourcePickup = null;
 
     void Start()
     {
@@ -69,6 +71,9 @@ public class ShipController : MonoBehaviour
 
     private void AddingResource(GameObject other)
     {
+        _audioSourcePickup.pitch = Random.Range(0.8f, 1.2f);
+        _audioSourcePickup.Play();
+
         Debug.Log($"AddingResource");
         var bonus = other.GetComponent<Bonus>();
         switch (bonus.Type)

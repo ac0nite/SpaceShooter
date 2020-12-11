@@ -17,10 +17,21 @@ public class Weapon : MonoBehaviour
         }
     }
 
-    public virtual void OnCollisionEnter2D(Collision2D other)
+
+    public virtual void OnTriggerEnter2D(Collider2D other)
     {
-        _pointExplosion = other.contacts[0].point;
+        //GetComponent<Collider2D>().enabled = false;
+
+        //_pointExplosion = other.contacts[0].point;
+        _pointExplosion = transform.position;
         other.gameObject.GetComponent<HealthComponent>()?.ChangeHealth(-_damage);
         Destroy(this.gameObject);
     }
+    //public virtual void OnCollisionEnter2D(Collision2D other)
+    //{
+    //    //GetComponent<Collider2D>().enabled = false;
+    //    _pointExplosion = other.contacts[0].point;
+    //    other.gameObject.GetComponent<HealthComponent>()?.ChangeHealth(-_damage);
+    //    Destroy(this.gameObject);
+    //}
 }

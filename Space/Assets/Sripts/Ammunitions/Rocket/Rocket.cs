@@ -12,6 +12,8 @@ public class Rocket : Weapon
     private DetectEnemy _detect = null;
     private MoveBase _move = null;
     private float _speed = 0;
+
+    [SerializeField] private AudioSource _audioSourceFly = null;
    // [SerializeField] private int _damage = 0;
 
     private Transform _enemy = null;
@@ -71,7 +73,17 @@ public class Rocket : Weapon
     {
         _enemy = _detect.Detect(LayerMask.GetMask("Enemy", "Mine"));
 
-        if (_enemy != null) 
+        if (_enemy != null)
+        {
             _move.Speed = Mathf.Clamp(_move.Speed * _acceleration, _speed, _speed * _acceleration);
+            if (!_audioSourceFly.isPlaying)
+                _audioSourceFly.Play();
+        }
+    }
+
+    public override void OnDestroy()
+    {
+        //_audioSourceFly.Stop();
+        base.OnDestroy();
     }
 }
