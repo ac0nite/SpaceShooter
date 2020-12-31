@@ -63,7 +63,9 @@ public class EnemyController : MonoBehaviour
             _model.SetActive(false);
             var fx = Instantiate(_explosion, transform.position, Quaternion.identity, GameManager.Instance.transform);
             fx.GetComponent<ParticleSystem>().Play();
+            Instantiate(GameManager.Instance.Bonus[3], transform.position, Quaternion.identity, GameManager.Instance.transform);
             Destroy(fx, fx.GetComponent<ParticleSystem>().main.duration);
+            
         }
     }
 }

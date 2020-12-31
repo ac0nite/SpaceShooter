@@ -12,6 +12,7 @@ public class MoveBase : MonoBehaviour
     [SerializeField] [Range(1f, 40f)] private float _speedRotate = 1f;
     private float _speed = 0f;
     private Rigidbody2D _rg = null;
+    private Collider2D _collider = null;
 
     public Vector2 Direction { set; get; }
     public float Speed { set; get; }
@@ -22,6 +23,7 @@ public class MoveBase : MonoBehaviour
         else Speed  = _speed = _maxSpeed;
         Direction = _direction;
         _rg = GetComponentInChildren<Rigidbody2D>();
+        _collider = GetComponentInChildren<Collider2D>();
     }
     void Update()
     {
@@ -36,9 +38,14 @@ public class MoveBase : MonoBehaviour
                 Destroy(this.gameObject);
         }
 
-        if (_rotate) 
+        if (_rotate && _collider != null)
+        {
+            //_rg.transform.Rotate(Vector3.forward, _speedRotate * Time.deltaTime);
+            _collider.transform.Rotate(Vector3.forward, _speedRotate * Time.deltaTime);
             //transform.Rotate(Vector3.forward, _speedRotate * Time.deltaTime);
-            _rg.transform.Rotate(Vector3.forward, _speedRotate * Time.deltaTime);
+        }
+        //transform.Rotate(Vector3.forward, _speedRotate * Time.deltaTime);
+
     }
     
     //rotate

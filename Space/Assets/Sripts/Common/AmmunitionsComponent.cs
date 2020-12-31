@@ -23,7 +23,7 @@ public class AmmunitionsComponent : MonoBehaviour
                     GameManager.Instance.LIFE += bonus.Count;
                     break;
                 default:
-          //          Debug.Log("Тип не определён");
+                    Debug.Log("Тип не определён");
                     break;
             }
         }

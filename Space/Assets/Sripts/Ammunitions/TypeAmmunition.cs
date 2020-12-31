@@ -10,5 +10,6 @@ public enum TypeAmmunition
     Rocket = 2,
     Mine = 3,
     Life = 4,
-    Health = 5
+    Health = 5,
+    Coin = 6
 }

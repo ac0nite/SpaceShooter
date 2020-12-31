@@ -19,6 +19,7 @@ public class ShipController : MonoBehaviour
         scope = Camera.main.ViewportToWorldPoint(new Vector3(1, 1, Camera.main.nearClipPlane));
 
         Ammunitions = GetComponent<AmmunitionsComponent>();
+        //GameManager.Instance.ScoreManager.Coins = -1000000;
     }
 
     void Update()
@@ -75,7 +76,7 @@ public class ShipController : MonoBehaviour
         _audioSourcePickup.Play();
 
         Debug.Log($"AddingResource");
-        var bonus = other.GetComponent<Bonus>();
+        var bonus = other.GetComponentInParent<Bonus>();
         switch (bonus.Type)
         {
             case TypeAmmunition.Life:
@@ -87,14 +88,16 @@ public class ShipController : MonoBehaviour
             case TypeAmmunition.Health:
                 Health.ChangeHealth(+bonus.Count);
                 break;
+            case TypeAmmunition.Coin:
+                GameManager.Instance.ScoreManager.Coins += bonus.Count;
+                break;
         }
         Destroy(other);
     }
     public void OnCollisionEnter2D(Collision2D other)
     {
         //Debug.Log($"Player OnTriggerEnter: {other.gameObject.layer} {LayerMask.NameToLayer()}");
-        if(other.gameObject.layer == LayerMask.NameToLayer("Enemy") || 
-                other.gameObject.layer == LayerMask.NameToLayer("Obstacles"))
+        if(other.gameObject.layer == LayerMask.NameToLayer("Enemy") || other.gameObject.layer == LayerMask.NameToLayer("Obstacles"))
             Crash(other.gameObject);
         else if(other.gameObject.layer == LayerMask.NameToLayer("Bonus"))
             AddingResource(other.gameObject);
