@@ -8,7 +8,7 @@ public class PausePanel : MonoBehaviour
 {
     [SerializeField] private Color[] colorSound;
     [SerializeField] private Text soundTxt = null;
-    public void TapSound(bool isSound)
+    public void TapSound()
     {
         if (AudioListener.volume > 0)
         {
