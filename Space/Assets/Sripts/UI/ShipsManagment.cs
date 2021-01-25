@@ -15,7 +15,7 @@ public class ShipsManagment : UIObjectManager
     {
         foreach (UIShipUse ship in _shipPrefabs)
         {
-            UIShipUse s = Instantiate(ship, Vector3.zero, Quaternion.identity, _content.transform);
+            UIShipUse s = Instantiate(ship, Vector3.zero, Quaternion.identity, Content.transform);
             s.EventClickSelect += ClickSelect;
         }
 
@@ -35,7 +35,7 @@ public class ShipsManagment : UIObjectManager
 
     private void OnDestroy()
     {
-        var ships = _content.GetComponentsInChildren<UIShipUse>().ToList();
+        var ships = Content.GetComponentsInChildren<UIShipUse>().ToList();
         foreach (UIShipUse s in ships)
         {
             s.EventClickSelect -= ClickSelect;

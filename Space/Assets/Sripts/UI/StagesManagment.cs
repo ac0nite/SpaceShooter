@@ -12,7 +12,7 @@ public class StagesManagment : UIObjectManager
     {
         foreach (UIStageUse stage in _stagPrefabs)
         {
-            UIStageUse s = Instantiate(stage, Vector3.zero, Quaternion.identity, _content.transform);
+            UIStageUse s = Instantiate(stage, Vector3.zero, Quaternion.identity, Content.transform);
             //UIStageUse s = Instantiate(stage, _content.transform, _content);
             s.EventClickSelect += ShopClickSelect;
             Stages.Add(s);

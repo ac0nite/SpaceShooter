@@ -18,8 +18,10 @@ public class UIMainMenu : MonoBehaviour
         _coins.text = "0";
         _highscore.text = "0";
         _shipManager.EventSelectShip += OnSelectShip;
+        Saving.Instance.Read();
+        Saving.Instance.UpdateShips(_shipManager.Content);
+        //Saving.Instance.UpdateStage(_stageManager.Content);
     }
-
     private void Start()
     {
        // _stageManager.Stages[0].IsSelect = StateSelect.SELECT;
@@ -55,5 +57,6 @@ public class UIMainMenu : MonoBehaviour
     private void OnDestroy()
     {
         _shipManager.EventSelectShip -= OnSelectShip;
+        Saving.Instance.Write();
     }
 }

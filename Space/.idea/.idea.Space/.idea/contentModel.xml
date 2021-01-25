@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\andrew\AppData\Local\JetBrains\Rider2020.1\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\andrew\AppData\Local\JetBrains\Rider2020.1\resharper-host\Local\Transient\ReSharperHost\v201\SolutionCaches\_Space.871863111.00" t="ExcludeRecursive" />
-    <e p="D:\unity\space\space" t="IncludeRecursive">
+    <e p="C:\Users\asach\AppData\Local\JetBrains\Rider2020.1\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\asach\AppData\Local\JetBrains\Rider2020.1\resharper-host\Local\Transient\ReSharperHost\v201\SolutionCaches\_Space.883179238.00" t="ExcludeRecursive" />
+    <e p="E:\unity\space\space" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="Asset" t="Include">
@@ -46,6 +46,7 @@
         </e>
         <e p="MineScope.cs" t="Include" />
         <e p="MinesSpawn.cs" t="Include" />
+        <e p="PausePanel.cs" t="Include" />
         <e p="Sripts" t="Include">
           <e p="Ammunitions" t="Include">
             <e p="Bonus" t="Include">
@@ -73,6 +74,7 @@
               <e p="Rocket.cs" t="Include" />
             </e>
             <e p="TypeAmmunition.cs" t="Include" />
+            <e p="Weapon.cs" t="Include" />
           </e>
           <e p="Background" t="Include">
             <e p="SpawnStars.cs" t="Include" />
@@ -94,12 +96,26 @@
             <e p="Joystick.cs" t="Include" />
             <e p="ShipController.cs" t="Include" />
           </e>
+          <e p="Save" t="Include">
+            <e p="Data.cs" t="Include" />
+            <e p="Saving.cs" t="Include" />
+          </e>
+          <e p="ScoreManager.cs" t="Include" />
           <e p="Shooting" t="Include">
             <e p="ShootingComponent.cs" t="Include" />
           </e>
           <e p="UI" t="Include">
             <e p="GamePlayPanel.cs" t="Include" />
+            <e p="MainMenu" t="Include">
+              <e p="UIMainMenu.cs" t="Include" />
+            </e>
+            <e p="ObjectUseBase.cs" t="Include" />
+            <e p="ShipsManagment.cs" t="Include" />
+            <e p="StagesManagment.cs" t="Include" />
             <e p="UIHealth.cs" t="Include" />
+            <e p="UIObjectManager.cs" t="Include" />
+            <e p="UIShipUse.cs" t="Include" />
+            <e p="UIStageUse.cs" t="Include" />
           </e>
         </e>
       </e>
