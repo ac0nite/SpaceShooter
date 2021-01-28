@@ -1,24 +1,39 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class StagesManagment : UIObjectManager
 {
     [SerializeField] private List<UIStageUse> _stagPrefabs = null;
-    public List<UIStageUse> Stages = new List<UIStageUse>();
     public UIStageUse SelectStage = null;
 
     private void Awake()
     {
-        foreach (UIStageUse stage in _stagPrefabs)
+        UpdateManagment();
+    }
+
+    public void UpdateManagment()
+    {
+        foreach (UIStageUse stagePrefab in _stagPrefabs)
         {
-            UIStageUse s = Instantiate(stage, Vector3.zero, Quaternion.identity, Content.transform);
-            //UIStageUse s = Instantiate(stage, _content.transform, _content);
-            s.EventClickSelect += ShopClickSelect;
-            Stages.Add(s);
+            UIStageUse stage = Instantiate(stagePrefab, Vector3.zero, Quaternion.identity, Content.transform);
+            var config = Saving.Instance.data.Stages.Find(s => s.Name == stage.Name);
+            if (config != null)
+            {
+                stage.IsLock = config.Lock;
+                stage.IsSelect = config.Select;
+            }
+            stage.EventClickSelect += ShopClickSelect;
         }
 
-       // Stages[0].IsLock = StateLock.SELECT;
+        //для первого запуска
+        if (Saving.Instance.data.Stages.Count == 0)
+        {
+            var stages = Content.GetComponentsInChildren<UIStageUse>();
+            stages[0].IsSelect = StateSelect.SELECT;
+            stages[0].IsLock = StateLock.UNLOCK;
+        }
     }
 
     private void ShopClickSelect(ObjectUseBase select)
@@ -33,6 +48,7 @@ public class StagesManagment : UIObjectManager
 
     private void OnDestroy()
     {
+        var Stages = Content.GetComponentsInChildren<UIStageUse>().ToList();
         foreach (UIStageUse s in Stages)
         {
             s.EventClickSelect -= ShopClickSelect;

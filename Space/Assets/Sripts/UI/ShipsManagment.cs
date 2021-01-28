@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using NUnit.Framework.Constraints;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -11,15 +12,26 @@ public class ShipsManagment : UIObjectManager
     public UIShipUse SelectShip = null;
     public Action<UIShipUse> EventSelectShip;
 
-    private void Awake()
+    private void Start()
     {
-        foreach (UIShipUse ship in _shipPrefabs)
+        foreach (UIShipUse shipPrefab in _shipPrefabs)
         {
-            UIShipUse s = Instantiate(ship, Vector3.zero, Quaternion.identity, Content.transform);
-            s.EventClickSelect += ClickSelect;
+            UIShipUse ship = Instantiate(shipPrefab, Vector3.zero, Quaternion.identity, Content.transform);
+            var config = Saving.Instance.data.Ships.Find(conf => conf.Name == ship.Name);
+            if (config != null)
+            {
+                ship.IsLock = config.Lock;
+                ship.IsSelect = config.Select;
+            }
+            ship.EventClickSelect += ClickSelect;
         }
 
-        //Ships[0].IsLock = StateLock.SELECT;
+        if (Saving.Instance.data.Ships.Count == 0)
+        {
+            var ships = Content.GetComponentsInChildren<UIShipUse>();
+            ships[0].IsSelect = StateSelect.SELECT;
+            ships[0].IsLock = StateLock.UNLOCK;
+        }
     }
 
     private void ClickSelect(ObjectUseBase select)

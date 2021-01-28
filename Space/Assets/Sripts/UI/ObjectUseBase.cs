@@ -26,7 +26,7 @@ public class ObjectUseBase : MonoBehaviour, IPointerClickHandler
     [SerializeField] private StateLock _isLock = StateLock.LOCK;
     [SerializeField] private StateSelect _isSelect = StateSelect.UNSELECT;
 
-    [SerializeField] private string _name = "no name";
+    [SerializeField] public string Name = "no name";
     private UIObjectManager _managment = null;
 
     public Action<ObjectUseBase> EventClickSelect;
@@ -57,7 +57,7 @@ public class ObjectUseBase : MonoBehaviour, IPointerClickHandler
             if (_isSelect == StateSelect.SELECT)
             {
                 _select.SetActive(true);
-                _managment.Name.text = _name;
+                _managment.Name.text = Name;
             }
             else
             {

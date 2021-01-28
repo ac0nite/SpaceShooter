@@ -347,9 +347,10 @@ MonoBehaviour:
   _select: {fileID: 896109050828402070}
   _unselect: {fileID: 896109051796353639}
   _lock: {fileID: 896109052146038116}
-  _isLock: 1
+  _isLock: 0
   _isSelect: 1
-  _name: Stels 100F
+  Name: YYY
+  Cost: 100
 --- !u!1 &896109052093298484
 GameObject:
   m_ObjectHideFlags: 0
